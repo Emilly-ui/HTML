@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<form id="form-register">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <!-- nome, cpf, data nasc. -->
+           
+    <!-- Nome obrigatório -->
+     <label for="input-name">Nome:</label>
+     <input type="text"
+    id="input-name"
+    name="name"
+    required
+    minlength="3"
+    placeholder="Seu nome completo">
+
+    </fieldset>
+    <fieldset>
+
+        <legend>Dados de Acesso</legend>
+        <!-- email, senha -->
+         <!-- E-mail com validação -->
+          <label for="input-email">E-maill:</label>
+<input type="email"
+id="input-email"
+name="email"
+required
+placeholder="seu@email.com">
+    </fieldset>
+    <fieldset>
+        <legend>Preferências</legend>
+        <!-- interesses, newsletter -->
+
+        <select name="category" id="input-category">
+            <option value="">Selecione...</opt ion>
+            <option value="Maquiagem">Maquiagem</option>
+            <option value="moda">Moda</option>
+        </select>
+
+
+        <input type="radio" name="client-type" id="radio-pf" value="pf">
+        <label for="radio-pf">Pessoa Física</label>
+        <input type="radio" name="client-type" id="radio-pj" value="pj">
+        <label for="radio-pj">Pessoa Jurídica</label>
+
+
+        <input type="checkbox" name="preferences" id="check-offers" value="offers">
+        <label for="check-offers">Receber ofertas</label>
+        <input type="checkbox" name="preferences" id="check-news" value="news">
+        <label for="check-news">Frete Grátis</label>
+
+    
+
+    </fieldset>
+
+    
+</form>
+</body>
+
+</html>
