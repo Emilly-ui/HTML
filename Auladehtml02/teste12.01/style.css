@@ -1,0 +1,277 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* ===========================
+   MENU
+=========================== */
+.nav-menu ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+main {
+    margin-top: 130px;
+    padding: 20px;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+.banner {
+    background-color: #871eff;;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+h2 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   TABELA
+=========================== */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.product-table th {
+    background-color: #871eff;
+    color: white;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* ===========================
+   PRODUTOS
+=========================== */
+#produtos {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.product-card {
+    display: inline-block;
+    width: 45%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+    border-color: #871eff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+/* ===========================
+   VÍDEOS
+=========================== */
+.promo-video {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.promo-video iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* ===========================
+   LOCALIZAÇÃO
+=========================== */
+.location {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.location iframe {
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* ===========================
+   SOBRE
+=========================== */
+.about {
+    background: white;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+.form-contact {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #871eff;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background-color: #871eff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6a10d4;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 768px) {
+
+    .product-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        margin-top: 180px;
+    }
+
+    .promo-video iframe,
+    .location iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
