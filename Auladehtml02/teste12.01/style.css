@@ -34,6 +34,13 @@ body {
 /* ===========================
    MENU
 =========================== */
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style:none;
+    margin-top: 10px;
+}
 .nav-menu ul {
     list-style: none;
     margin-top: 15px;
@@ -114,7 +121,7 @@ h3 {
 /* ===========================
    PRODUTOS
 =========================== */
-#produtos {
+.products {
     margin-bottom: 40px;
     text-align: center;
 }
