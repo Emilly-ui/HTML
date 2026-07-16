@@ -1,284 +1,254 @@
-/* ===========================
-   RESET
-=========================== */
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #e3f2fd;
+  --dark-color: #222;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+
+  --spacing: 15px;
+  --radius: 8px;
+}
+
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===========================
-   BODY
-=========================== */
+/* Base mobile-first */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-/* ===========================
-   HEADER
-=========================== */
+/* Header */
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    z-index: 1000;
+  background-color: #1e90ff;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-/* ===========================
-   MENU
-=========================== */
-
+/* Menu com Flexbox */
 .nav-menu ul {
-    display: flex;
-    justify-content: center;
-    list-style:none;
-    margin-top: 10px;
-}
-.nav-menu ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.nav-menu li {
-    display: inline-block;
-    margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    text-decoration: underline;
+  opacity: 0.7;
 }
 
-/* ===========================
-   MAIN
-=========================== */
+/* Espaço do header */
 main {
-    margin-top: 130px;
-    padding: 20px;
+  margin-top: 100px;
 }
 
-/* ===========================
-   BANNER
-=========================== */
+/* Banner */
 .banner {
-    background-color: #871eff;;
-    border-radius: 10px;
-    padding: 25px;
-    text-align: center;
-    margin-bottom: 30px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  margin: 10px;
+  border-radius: var(--radius);
+  text-align: center;
+
+  /* animação */
+  animation: fadeIn 1s ease-in;
 }
 
-/* ===========================
-   TÍTULOS
-=========================== */
-h2 {
-    margin-bottom: 15px;
-    color: black;
-}
-
-h3 {
-    margin-bottom: 10px;
-}
-
-/* ===========================
-   TABELA
-=========================== */
-.product-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    margin-bottom: 30px;
-}
-
-.product-table th,
-.product-table td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: center;
-}
-
-.product-table th {
-    background-color: #871eff;
-    color: white;
-}
-
-.product-table tr:nth-child(even) {
-    background-color: #f8f8f8;
-}
-
-/* ===========================
-   PRODUTOS
-=========================== */
+/* Produtos com GRID (mobile: 1 coluna) */
 .products {
-    margin-bottom: 40px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing);
+  padding: 10px;
 }
 
+/* Card */
 .product-card {
-    display: inline-block;
-    width: 45%;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    vertical-align: top;
-    transition: 0.3s;
+  background-color: white;
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  text-align: center;
 }
 
+/* interação */
 .product-card:hover {
-    transform: scale(1.03);
-    border-color: #871eff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    margin: 15px 0;
-    border-radius: 8px;
-}
-
-/* ===========================
-   VÍDEOS
-=========================== */
-.promo-video {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.promo-video iframe {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* ===========================
-   LOCALIZAÇÃO
-=========================== */
-.location {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.location iframe {
-    margin: 10px;
-    border-radius: 8px;
-}
-
-/* ===========================
-   SOBRE
-=========================== */
-.about {
-    background: white;
-    padding: 20px;
-    margin: 40px 0;
-    border-radius: 10px;
-}
-
-/* ===========================
-   FORMULÁRIO
-=========================== */
-.form-contact {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-fieldset {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-legend {
-    font-weight: bold;
-    color: #871eff;
-    padding: 0 10px;
-}
-
-label {
-    display: block;
-    margin-top: 12px;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-button {
-    background-color: #871eff;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #6a10d4;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* ===========================
+/* =========================
    RESPONSIVIDADE
-=========================== */
-@media (max-width: 768px) {
+========================= */
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    .product-card {
-        width: 100%;
-        margin: 10px 0;
-    }
+@media (min-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    .nav-menu li {
-        display: block;
-        margin: 10px 0;
-    }
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: var(--spacing);
+}
 
-    main {
-        margin-top: 180px;
-    }
+/* =========================
+   ANIMAÇÕES
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-    .promo-video iframe,
-    .location iframe {
-        width: 100%;
-        height: 300px;
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about {
+  padding: 20px;
+  margin: 10px;
+}
+
+/* container só para video + localização */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* cards */
+.promo-video,
+.location {
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* títulos */
+.promo-video h2,
+.location h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* mídias responsivas */
+.promo-video video,
+.location iframe {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  border-radius: var(--radius);
+}
+
+/* TEXTO SOBRE CENTRALIZADO */
+.about-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* DESKTOP: lado a lado */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+  }
+
+  .promo-video,
+  .location {
+    flex: 1;
+  }
+}
+
+.contact {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact form {
+  background-color: white;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* inputs */
+.contact input {
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+/* botão */
+.contact button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
