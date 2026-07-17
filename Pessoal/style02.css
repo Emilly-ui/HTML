@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET & CONFIGURAÇÕES GERAIS
-   ========================================================================== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +6,13 @@
 }
 
 :root {
-    --primary-color: #581c87; /* Roxo escuro elegante */
-    --primary-light: #f3e8ff; /* Lavanda clarinho para contrastes */
-    --accent-color: #a855f7;  /* Roxo médio para destaques */
-    --text-main: #334155;     /* Cinza escuro confortável para leitura */
-    --text-muted: #64748b;    /* Cinza médio */
-    --bg-light: #faf5ff;      /* Fundo suave com leve toque lavanda */
-    --card-shadow: 0 4px 20px rgba(88, 28, 135, 0.05); /* Sombra suave purpurada */
+    --primary-color: #581c87; 
+    --primary-light: #f3e8ff; 
+    --accent-color: #a855f7;  
+    --text-main: #334155;     
+    --text-muted: #64748b;    
+    --bg-light: #faf5ff;
+    --card-shadow: 0 4px 20px rgba(88, 28, 135, 0.05); 
     --transition-fast: all 0.3s ease;
 }
 
@@ -25,9 +23,7 @@ body {
     line-height: 1.7;
 }
 
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
+/* HEADER */
 .header {
     background: linear-gradient(135deg, var(--primary-color), #3b0764);
     color: white;
@@ -85,12 +81,12 @@ body {
     color: var(--primary-color);
 }
 
-/* ==========================================================================
-   MAIN CONTENT
-   ========================================================================== */
+.nav-menu b
+
+/* MAIN CONTENT */
 .main-content {
     max-width: 800px;
-    margin: -40px auto 60px auto; /* Sobe um pouco para sobrepor o header de forma moderna */
+    margin: -40px auto 60px auto; 
     padding: 0 20px;
 }
 
@@ -197,9 +193,7 @@ body {
     color: var(--primary-color);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+/* FOOTER */
 .footer {
     background-color: #0f172a; /* Azul quase preto, super chique */
     color: #94a3b8;
@@ -209,9 +203,7 @@ body {
     border-radius: 30px 30px 0 0;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
+/* RESPONSIVIDADE */
 @media (max-width: 600px) {
     .header {
         padding: 40px 15px;
@@ -240,4 +232,16 @@ body {
     .info-list {
         grid-template-columns: 1fr;
     }
+}
+
+.interesses img {
+   width: 250px;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: transform 0.3s;
+}
+
+.iinteresses img hover {
+    transform: scale(1.05)
+
 }

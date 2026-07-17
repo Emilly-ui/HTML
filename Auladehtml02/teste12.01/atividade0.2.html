@@ -1,245 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link com CSS externo -->
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="style.css">
+    <title>Minha Loja Online</title>
+  </head>
 
-    <title>Loja Online</title>
-</head>
-
-<body>
-
+  <body>
+    <!-- Cabeçalho -->
     <header class="header">
-        <h1>Loja Online</h1>
+      <h1>Minha Loja Online</h1>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="main-content" id="home">
+    <main id="home">
+      <!-- Banner -->
+      <section class="banner" aria-label="Destaque principal">
+        <h2>Promoções Imperdíveis</h2>
+        <p>Os melhores produtos com os melhores preços!</p>
+      </section>
 
-        <section class="banner" aria-label="Destaque principal">
-            <h2>Promoções Imperdíveis</h2>
-            <p>Os melhores produtos com os melhores preços!</p>
-        </section>
+      <!-- Produtos com imagem -->
+      <section class="products">
+        <article class="product-card">
+          <h3>Smartphone</h3>
+          <img src="/fotos/SAMSUNG A56.webp" alt="Imagem de um smartphone moderno" />
+          <p>Smartphone com alta tecnologia.</p>
+          <button class="btn">Comprar</button>
+        </article>
 
-        <section class="tabela-produtos" id="products">
-            <h2>Tabela de Produtos</h2>
+        <article class="product-card">
+          <h3>Capinha A56</h3>
+          <img src="/fotos/f71c05f6f983fb6a52e02cd9d670e13c.webp" alt="Camiseta casual confortável" />
+          <p>Capinha transparente de A56.<picture>
+            <source media="(min-width: )" srcset="">
+            <img src="" alt="">
+          </picture>.</p>
+          <button class="btn">Comprar</button>
+        </article>
 
-            <table class="product-table">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Preço</th>
-                        <th>Categoria</th>
-                    </tr>
-                </thead>
+        <article class="product-card">
+          <h3>Carregador</h3>
+          <img src="/fotos/carregador.jpg" alt="Carregador Ultra rápido" width="200" />
+          <p>Carregador tipo c.</p>
+          <button class="btn">Comprar</button>
+        </article>
 
-                <tbody>
-                    <tr>
-                        <td>Samsung Galaxy A56</td>
-                        <td>R$ 2.500,00</td>
-                        <td>Android</td>
-                    </tr>
+        <article class="product-card">
+          <h3>Fone</h3>
+          <img src="/fotos/Galaxy-Buds-Pro-PR_dl1_kv-798x563.jpg" alt="Imagem de um fone de ouvido" width="200" />
+          <p>Fone de ouvido de alta fidelidade.</p>
+          <button class="btn">Comprar</button>
+        </article>
+      </section>
 
-                    <tr>
-                        <td>Capa de celular</td>
-                        <td>R$ 30,00</td>
-                        <td>Acessórios</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+      <!-- Sobre -->
+      <section id="sobre" class="about">
+        <div class="about-content">
+          <!-- Vídeo promocional -->
+          <section class="promo-video">
+            <h2>Conheça nossa loja</h2>
 
-        <section id="produtos">
+            <video controls width="500">
+              <source src="img/video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo.
+            </video>
+          </section>
 
-            <h2>Nossos Produtos</h2>
-
-            <article class="product-card">
-                <h3>Samsung Galaxy A56</h3>
-
-                <img src="/fotos/SAMSUNG A56.webp"
-                    alt="Imagem do smartphone Samsung Galaxy A56"
-                    width="500"
-                    height="400">
-
-                <p>Smartphone com alta tecnologia.</p>
-            </article>
-
-            <article class="product-card">
-                <h3>Capa de celular</h3>
-
-                <img src="/fotos/f71c05f6f983fb6a52e02cd9d670e13c.webp"
-                    alt="Capa para Samsung Galaxy A56"
-                    class="product-image"
-                    width="300"
-                    height="400">
-
-                <p>Capa de celular A56.</p>
-            </article>
-
-        </section>
-
-        <section class="promo-video">
-
-            <h2>Conheça o celular A56</h2>
+          <!-- Integração com iframe -->
+          <section class="location">
+            <h3>Nossa Localização</h3>
 
             <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/EMu2e653vCw"
-                title="Unboxing Oficial | Galaxy A56 5G"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-
-        </section>
-
-        <section class="location">
-
-            <h2>Nossa Localização</h2>
-
-            <iframe
-                width="300"
-                height="200"
-                src="https://www.youtube.com/embed/a4cA0ET9DRY?si=WXRjD9ngmuBGpHN7"
-                title="Vídeo externo">
+              src="https://www.youtube.com/embed/a4cA0ET9DRY?si=WXRjD9ngmuBGpHN7"
+              width="300"
+              height="200"
+              title="Vídeo externo"
+            >
             </iframe>
 
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6249.5718551402415!2d-43.20067162297481!3d-22.909948079252946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f0c4e687185%3A0x973c7a140b9b61fa!2sEdif%C3%ADcio%20Eco%20Sapuca%C3%AD!5e1!3m2!1spt-BR!2sbr!4v1776867085334!5m2!1spt-BR!2sbr"
-                width="300"
-                height="200"
-                style="border:0;"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa da loja">
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6249.5718551402415!2d-43.20067162297481!3d-22.909948079252946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f0c4e687185%3A0x973c7a140b9b61fa!2sEdif%C3%ADcio%20Eco%20Sapuca%C3%AD!5e1!3m2!1spt-BR!2sbr!4v1776867085334!5m2!1spt-BR!2sbr"
+              width="300"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Maps"
+            >
             </iframe>
+          </section>
+        </div>
 
-        </section>
+        <h2 class="about-title">Sobre a Loja</h2>
+        <p class="about-text">
+          Somos uma loja dedicada a oferecer produtos de qualidade com os
+          melhores preços.
+        </p>
+      </section>
 
-        <section class="about">
+      <!-- Contato -->
+      <section id="contato" class="contact">
+        <h2>Contato</h2>
 
-            <h2>Sobre a Loja</h2>
+        <form aria-label="Formulário de contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required />
 
-            <p>
-                Somos uma loja dedicada a oferecer produtos de qualidade com os melhores preços.
-            </p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
 
-        </section>
-
-        <section id="contato">
-
-            <h2>Cadastro / Contato</h2>
-
-            <form class="form-contact">
-
-                <fieldset>
-
-                    <legend>Dados do Usuário</legend>
-
-                    <label for="nome">Nome:</label>
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite seu nome"
-                        required>
-
-                    <label for="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="exemplo@email.com"
-                        required>
-
-                    <label for="senha">Senha:</label>
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        minlength="6"
-                        required>
-
-                    <label for="idade">Idade:</label>
-                    <input
-                        type="number"
-                        id="idade"
-                        name="idade"
-                        min="18"
-                        required>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <legend>Preferências</legend>
-
-                    <label for="categoria">Categoria de interesse:</label>
-
-                    <select id="categoria" name="categoria">
-                        <option value="eletronicos">Eletrônicos</option>
-                        <option value="acessorios">Acessórios</option>
-                    </select>
-
-                    <p>Tipo de cliente:</p>
-
-                    <label>
-                        <input type="radio" name="tipo" value="pf" required>
-                        Pessoa Física
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo" value="pj">
-                        Pessoa Jurídica
-                    </label>
-
-                    <p>Preferências:</p>
-
-                    <label>
-                        <input type="checkbox" name="promo">
-                        Receber promoções
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="novidades">
-                        Receber novidades
-                    </label>
-
-                </fieldset>
-
-                <label for="mensagem">Mensagem:</label>
-
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows="4"
-                    placeholder="Digite sua mensagem"></textarea>
-
-                <button type="submit">Enviar</button>
-
-            </form>
-
-        </section>
-
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Loja Online</p>
+      <p>&copy; 2026 Minha Loja Online</p>
     </footer>
-
-</body>
-
+  </body>
 </html>
